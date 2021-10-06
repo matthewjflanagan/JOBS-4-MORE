@@ -11,10 +11,10 @@ THEN I see a search bar with a dropdown menu of different job types
 WHEN I click on a category
 THEN I can use the search bar to view a list of jobs in a certain location 
 
-
-WireFrame: 
-![Opening Page](assets/openingpage.png)
-![Results Page](assets/resultspage.png)
+![Opening Page with Dropdown](assets/openpagewithdropdown.png)
+![Opening Page without Dropdown](assets/openingpagewithoutdropdown.png)
+![Results Page with Dropdown](assets/resultspagewithdropdown.png)
+![Results Page without Dropdown](assets/resultspagewithoutdropdown.png)
 
 API's to be used: Jooble & The Muse
 
