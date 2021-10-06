@@ -13,8 +13,8 @@ THEN I can use the search bar to view a list of jobs in a certain location
 
 
 WireFrame: 
-![Opening Page](.assets\openingpage.png)
-![Results Page](.assets\resultspage.png)
+![](assets\openingpage.png)
+![Results Page](assets\resultspage.png)
 
 API's to be used: Jooble & The Muse
 
@@ -25,7 +25,7 @@ Build base HTML & Style website (Landing Page)
         Web Developer
         Doctor
         Lawyer
-        Police Officer  
+        Police Officer 
 
 
 Building script.js
