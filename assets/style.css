@@ -1,0 +1,137 @@
+/* LANDING PAGE CSS STARTS HERE */
+body {
+    background-image: url(money.jpeg);
+    background-size: 100%;
+}
+
+section, aside {
+   background-color: rgba(0, 0, 0, 0.829);
+   color: white;
+   height: 350px;
+   width: 400px;
+   margin: auto;
+   margin-top: 100px;
+   align-content: center;
+   border-style: groove
+}
+
+aside {
+    float: right;
+    margin-top: unset;
+}
+
+section p, aside p {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#location-input, #job-title-input, #location-input-2, #job-title-input-2 {
+    width: 350px;
+    margin-top: -10px;
+}
+
+#search-button, #search-button-2, #go-back-button {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: solid;
+    z-index: -100;
+}
+
+#search-button {
+    margin-top: 35px;
+    /* position: initial; */
+}
+
+/* RESULTS PAGE CSS STARTS HERE */
+/* aside {
+    float: right;
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+    height: 350px;
+    width: 400px;
+    margin: auto;
+    align-content: center;
+    border-style: groove
+} */
+
+/* aside p {
+    text-align: center;
+} */
+
+/* #location-input-2, #job-title-input-2 {
+    width: 350px;
+    margin-top: -10px;
+} */
+
+/* #search-button-2, #go-back-button {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: solid;
+} */
+
+#search-button-2 {
+    margin-bottom: -30px;
+}
+
+#go-back-button {
+    background-color: firebrick;
+    margin-top: 0px;
+}
+
+
+/* DROPDOWN CSS FOR BOTH PAGES */
+#job-field-button, #job-field-button-2 {
+    background-color: white;
+    color: rgb(59, 59, 59);
+    margin-left: 22px;
+    padding: 3px;
+    border: none;
+    width: 355px;
+    text-align: left;
+}
+  
+#job-field, #job-field-2 {
+    width: 377px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: 22px;
+    width: 355px;
+    background-color: #f1f1f1;
+}
+  
+.dropdown-content a {
+    color: black;
+    width: 345px;
+    font-size: 14px;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: white}
