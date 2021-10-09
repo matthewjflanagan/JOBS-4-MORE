@@ -7,6 +7,7 @@ let jobsContainer = $("#jobs-container");
 function generateJobElements(results) {
   console.log(results);
   results.forEach(function (element) {
+    console.log(results)
     let name = element.name;
     let company = element.company.name;
     let location = element.locations[0].name;
