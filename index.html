@@ -11,17 +11,43 @@
     <section>
       <h2>JOBS 4 MORE</h2>
       <p><input type="text" placeholder="Enter Location" name="keyword" id="location-input" /></p>
-      <p><input type="text" placeholder="Enter Job Title" name="keyword-2" id="job-title-input" /></p>
-      <div id="job-field" class="dropdown">
-        <button id="job-field-button" class="dropbtn">Select Job Field</button>
-        <div id="job-field-content" class="dropdown-content">
-          <a href="#">Business</a>
-          <a href="#">Education</a>
-          <a href="#">Medical</a>
-        </div>
-      </div>
+      <!-- <p><input type="text" placeholder="Enter Job Title" name="keyword-2" id="job-title-input" /></p> -->
+      
+      <select name="level" id="level">
+        <option value="" id="level-input">--Experience level--</option>
+        <option value="Entry Level">Entry Level</option>
+        <option value="Senior Level">Senior Level</option>
+        <option value="Internship">Internship</option>
+        <option value="Mid Level">Government</option>
+        <option value="management">Management</option>
+        
+      </select>
+      
+
+      <select name="Industry" id="Industry">
+        <option value="" id ="industry-input">--Industry--</option>
+        <option value="Architecture">Architecture</option>
+        <option value="Education">Education</option>
+        <option value="Finance">Finance</option>
+        <option value="Government">Government</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Law">Law</option>
+        <option value="Tech">Tech</option>
+      </select>
+           
+      
       <p><button id="search-button">Search</button></p>
     </section>
-    <!-- <script src="./assets/js/script.js"></script> -->
+    <div id="map"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgJqlD8crlm7n9pxwkpxzGoEw2a33qIIY&callback=initMap&v=weekly"
+      async
+    ></script> 
+    
+    
+    
+
   </body>
 </html>
