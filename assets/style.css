@@ -4,7 +4,12 @@ body {
     background-size: 100%;
 }
 
-section, aside {
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section, aside{
    background-color: rgba(0, 0, 0, 0.829);
    color: white;
    height: 350px;
@@ -12,16 +17,44 @@ section, aside {
    margin: auto;
    margin-top: 100px;
    align-content: center;
-   border-style: groove
+   border-style: groove;
 }
 
 aside {
     float: right;
     margin-top: unset;
+    height: 320px;
+    position: absolute;
 }
 
 section p, aside p {
     text-align: center;
+}
+
+#results {
+    background-color: rgba(0, 0, 0, 0.829);
+    /* float: left; */
+    border-style: groove;
+    height:fit-content;
+    width: 1000px;
+}
+
+.container {
+    height: 120px;
+    width: auto;
+    border-style: groove;
+    margin: 20px;
+    background: whitesmoke;
+}
+
+#form {
+    margin-top: inherit;
+    margin-right: inherit;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -30,12 +63,12 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#location-input, #job-title-input, #location-input-2, #job-title-input-2 {
+#location-input, #location-input-2 {
     width: 350px;
     margin-top: -10px;
 }
 
-#search-button, #search-button-2, #go-back-button {
+#search-button, #search-button-2{
     background-color: rgb(0, 132, 255);
     color: white;
     width: 150px;
@@ -51,55 +84,14 @@ h2 {
 
 #search-button {
     margin-top: 35px;
-    /* position: initial; */
 }
 
-/* RESULTS PAGE CSS STARTS HERE */
-/* aside {
-    float: right;
-    background-color: rgba(0, 0, 0, 0.829);
-    color: white;
-    height: 350px;
-    width: 400px;
-    margin: auto;
-    align-content: center;
-    border-style: groove
-} */
-
-/* aside p {
-    text-align: center;
-} */
-
-/* #location-input-2, #job-title-input-2 {
-    width: 350px;
-    margin-top: -10px;
-} */
-
-/* #search-button-2, #go-back-button {
-    background-color: rgb(0, 132, 255);
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-style: solid;
-} */
-
-#search-button-2 {
-    margin-bottom: -30px;
+#job-field-button, #job-field-button-2 {
+    margin-top: 15px;
 }
-
-#go-back-button {
-    background-color: firebrick;
-    margin-top: 0px;
-}
-
 
 /* DROPDOWN CSS FOR BOTH PAGES */
-#job-field-button, #job-field-button-2 {
+.dropbtn  {
     background-color: white;
     color: rgb(59, 59, 59);
     margin-left: 22px;
@@ -109,7 +101,7 @@ h2 {
     text-align: left;
 }
   
-#job-field, #job-field-2 {
+.dropdown {
     width: 377px;
 }
 
