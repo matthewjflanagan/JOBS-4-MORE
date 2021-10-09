@@ -63,8 +63,8 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#location-input, #location-input-2 {
-    width: 350px;
+#location-input, #job-title-input, #location-input-2, #job-title-input-2 {
+    width: 50%;
     margin-top: -10px;
 }
 
@@ -84,6 +84,8 @@ h2 {
 
 #search-button {
     margin-top: 35px;
+    width: 50%;
+    /* position: initial; */
 }
 
 #job-field-button, #job-field-button-2 {
@@ -95,21 +97,20 @@ h2 {
     background-color: white;
     color: rgb(59, 59, 59);
     margin-left: 22px;
-    padding: 3px;
+    /* padding: 3px; */
     border: none;
-    width: 355px;
+    width: 50%;
     text-align: left;
 }
-  
-.dropdown {
+
     width: 377px;
-}
+} */
 
 .dropdown-content {
     display: none;
     position: absolute;
     margin-left: 22px;
-    width: 355px;
+    width: 50%;
     background-color: #f1f1f1;
 }
   
@@ -127,3 +128,22 @@ h2 {
 .dropdown:hover .dropdown-content {display: block;}
   
 .dropdown:hover .dropbtn {background-color: white}
+#Industry{
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+}
+#level{
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    margin-bottom: 16px;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    margin-top: 70px;
+  }
