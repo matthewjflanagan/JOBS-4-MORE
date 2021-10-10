@@ -16,6 +16,61 @@ h1 {
     padding-left: 20px;
 }
 
+section {
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+    height: 350px;
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    align-content: center;
+    border-style: groove;
+ }
+ 
+#homepage-header {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section p {
+     text-align: center;
+ }
+
+#location-input {
+    width: 50%;
+    margin-top: -10px;
+}
+
+#Industry {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+}
+
+#level {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    margin-bottom: 16px;
+}
+
+#search-button {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    width: 50%;
+    height: 40px;
+    margin-top: 35px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: solid;
+}
+
+/* RESULTS PAGE CSS STARTS HERE */
 a:link {
     text-decoration: none;
 }
@@ -37,28 +92,6 @@ main {
     flex-wrap: wrap;
 }
 
-section, aside{
-   background-color: rgba(0, 0, 0, 0.829);
-   color: white;
-   height: 350px;
-   width: 400px;
-   margin: auto;
-   margin-top: 100px;
-   align-content: center;
-   border-style: groove;
-}
-
-aside {
-    float: right;
-    margin-top: unset;
-    height: 320px;
-    position: absolute;
-}
-
-section p, aside p {
-    text-align: center;
-}
-
 #results {
     background-color: rgba(0, 0, 0, 0.829);
     border-style: groove;
@@ -66,108 +99,60 @@ section p, aside p {
     width: 1000px;
 }
 
-.container {
+/* For testing purposes, won't show up in finished product.
+    .container {
     height: 120px;
     width: auto;
     border-style: groove;
     margin: 20px;
     background: whitesmoke;
+} */
+
+/* JOB DESCRIPTION CSS STARTS HERE */
+#body-3 {
+    background-image: url(money-3.jpeg);
+    background-size: 100%;
 }
 
-#form {
-    margin-top: inherit;
-    margin-right: inherit;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
+#job-container {
+    background-color: rgba(0, 0, 0, 0.829); 
+    border-style: groove;
+    margin: inherit;
+    padding-left: 20px;
+    max-height: fit-content;
+    max-width: 700px;
+    float: left;
 }
 
-h2 {
-    text-align: center;
-    font-size: 40px;
+.job-headers {
+    color: white;
     font-family: 'Courier New', Courier, monospace;
 }
 
-#location-input, #job-title-input, #location-input-2, #job-title-input-2 {
-    width: 50%;
-    margin-top: -10px;
+article p {
+    max-height: fit-content;
+    width: 670px;
+    background-color: rgb(212, 192, 192);
+    margin-right: 15px;
+    padding: 5px;
 }
 
-#search-button, #search-button-2{
-    background-color: rgb(0, 132, 255);
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-style: solid;
-    z-index: -100;
-}
-
-#search-button {
-    margin-top: 35px;
-    width: 50%;
-    /* position: initial; */
-}
-
-#job-field-button, #job-field-button-2 {
-    margin-top: 15px;
-}
-
-/* DROPDOWN CSS FOR BOTH PAGES */
-.dropbtn  {
-    background-color: white;
-    color: rgb(59, 59, 59);
-    margin-left: 22px;
-    /* padding: 3px; */
-    border: none;
-    width: 50%;
-    text-align: left;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    margin-left: 22px;
-    width: 50%;
-    background-color: #f1f1f1;
-}
-  
-.dropdown-content a {
-    color: black;
-    width: 345px;
-    font-size: 14px;
-    padding: 5px 5px;
-    text-decoration: none;
-    display: block;
-}
-  
-.dropdown-content a:hover {background-color: #ddd;}
-  
-.dropdown:hover .dropdown-content {display: block;}
-  
-.dropdown:hover .dropbtn {background-color: white}
-#Industry{
-    display:block;
-    margin-left: auto;
-    margin-right:auto;
-    width: 50%;
-}
-#level{
-    display:block;
-    margin-left: auto;
-    margin-right:auto;
-    width: 50%;
-    margin-bottom: 16px;
+#go-back {
+    text-align: center;
 }
 
 #map {
+    float: right;
+    background-color: rgba(0, 0, 0, 0.829);
+    border-style: groove;
+    width: 650px;
+    height: 450px;
+    margin: inherit;
+}
+
+
+/* #map {
     height: 300px;
     width: 100%;
     margin-top: 70px;
-  }
+  } */
