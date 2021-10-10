@@ -9,8 +9,6 @@ function getParams() {
     searchApi(queryJob, queryLevel, queryIndustry);
   }
 
-console.log(queryJob)
-
 function lunchSearch(inputLoc, levelJo, industryJo) {
     var requestUrl = `https://www.themuse.com/api/public/jobs?location=${inputLoc}&level=${levelJo}&industry=${industryJo}&page=${1}`;
   
@@ -20,8 +18,6 @@ function lunchSearch(inputLoc, levelJo, industryJo) {
       })
       .then(function (data) {
         console.log(data)
-  
-  
       })
   }
 
@@ -29,7 +25,6 @@ function lunchSearch(inputLoc, levelJo, industryJo) {
   
     var requestUrl1 = "https://api.openweathermap.org/data/2.5/weather?q=" + inputLoc +
       "&appid=5ec79846ae2fb1a4571dea79f4797492"
-  
   
     fetch(requestUrl1)
       .then(function (response) {

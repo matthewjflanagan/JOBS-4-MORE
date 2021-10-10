@@ -1,9 +1,10 @@
-$("#search-button").on("click", startSearch)
+$(document).ready(function () {
 var inputLocation = $("#location-input")
 var levelJobs = $("#level-input")
 var industryJobs = $("#industry-input")
 var latitude
 var longitude
+var searchFormEl = document.querySelector('#search-form');
 
 function startSearch(event) {
   event.preventDefault()
@@ -14,33 +15,23 @@ function startSearch(event) {
   mapLocation(inputLoc)
 }
 
-
 $("#search-button").on("click", startSearch)
-
-
-
-var searchFormEl = document.querySelector('#search-form');
-
 
 function startSearch(event) {
   event.preventDefault()
-  var inputLocation = $("#location-input")
-
-  console.log(inputLocation )
-  var levelJobs = $("#level-input")
-  var industryJobs = $("#industry-input")
   var inputLoc = inputLocation.val().trim()
   var levelJo = levelJobs.val()
   var industryJo = industryJobs.val()
 
-if (!inputLoc && !levelJo && !industryJo){
-alert("Must fill out all the form")
-}
- var queryString = "./results-page.html?q=" + inputLoc + "&level=" + levelJo + "&industry=" + industryJo
+  if (!inputLoc && !levelJo && !industryJo){
+  alert("Must fill out all the form")
+  } else {
+  var queryString = "./results-page.html?q=" + inputLoc + "&level=" + levelJo + "&industry=" + industryJo
 
  location.assign(queryString)
   lunchSearch(inputLoc, levelJo, industryJo)
   mapLocation(inputLoc)
+  }
 }
 
 function lunchSearch(inputLoc, levelJo, industryJo) {
@@ -53,8 +44,6 @@ function lunchSearch(inputLoc, levelJo, industryJo) {
     })
     .then(function (data) {
       console.log(data)
-
-
     })
 }
 
@@ -180,3 +169,4 @@ fetch("https://google-maps-geocoding.p.rapidapi.com/geocode/json?lat="+ latitude
 	console.error(err);
 });
 }
+})
