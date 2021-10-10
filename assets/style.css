@@ -109,47 +109,50 @@ main {
 } */
 
 /* JOB DESCRIPTION CSS STARTS HERE */
-#body-3 {
-    background-image: url(money-3.jpeg);
+/* #body-3 {
+    background-image: url(money.jpeg);
     background-size: 100%;
-}
+} */
 
 #job-container {
     background-color: rgba(0, 0, 0, 0.829); 
     border-style: groove;
-    margin: inherit;
+    margin-top: 20px;
     padding-left: 20px;
     max-height: fit-content;
-    max-width: 700px;
-    float: left;
+    max-width: 650px;
+    position: relative;
+    left: 25%;
 }
 
 .job-headers {
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    display: block;
 }
 
-article p {
+article p, #go-back {
     max-height: fit-content;
-    width: 670px;
+    max-width: 600px;
     background-color: rgb(212, 192, 192);
-    margin-right: 15px;
+    border-style: groove;
+    margin: 10px;
     padding: 5px;
 }
 
 #go-back {
+    width: 600px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 #map {
-    float: right;
     background-color: rgba(0, 0, 0, 0.829);
     border-style: groove;
-    width: 650px;
-    height: 450px;
-    margin: inherit;
+    width: 600px;
+    height: 300px;
+    margin: 15px;
 }
-
 
 /* #map {
     height: 300px;
