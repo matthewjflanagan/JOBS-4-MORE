@@ -11,6 +11,8 @@
 - [License](#license)
 
 ## Installation
+
+
 ## Usage
 [JOBS 4 MORE Respostion](https://github.com/matthewjflanagan/JOBS-4-MORE)
 https://matthewjflanagan.github.io/JOBS-4-MORE/
@@ -25,6 +27,8 @@ Acceptance Criteria:
 ![Results Page with Dropdown](assets/resultspagewithdropdown.png)
 ![Results Page without Dropdown](assets/resultspagewithoutdropdown.png)
 ## Credits
+
+
 ## License
 MIT License
 Copyright (c) [2021] [matthewflanagan]
@@ -43,16 +47,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-## Features
 
 ## How to Contribute
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-matthewjflanagan/JOBS-4-MORE
-Stars
-1
-Language
-HTML
-Added by GitHub
   
 ## Credits
 
@@ -81,7 +78,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Features
-Find the current temperature, humidty, wind speed, and UV Index for any city in the world! A 5 day forecast showing temperature, wind speed, and humidity will also be displayed below the current weather. Keep a history of the cities searched and have the option to clear the history as well. 
+Look up a job by industry and experience level to find the job that be best suited for your skillset and experience! A list of jobs will show best on the parameters chosen and you can view each job in more details once you click on the link to the job. Details shown are the job title, company, description, and the location of the job site shown on google maps. 
 
 ## How to Contribute
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
