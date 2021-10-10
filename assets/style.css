@@ -4,6 +4,34 @@ body {
     background-size: 100%;
 }
 
+header {
+    background-color: rgba(0, 0, 0, 0.829);
+    height: 75px;
+    border-style: groove;
+}
+
+h1 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+  
+a:active {
+    text-decoration: none;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +61,6 @@ section p, aside p {
 
 #results {
     background-color: rgba(0, 0, 0, 0.829);
-    /* float: left; */
     border-style: groove;
     height:fit-content;
     width: 1000px;
