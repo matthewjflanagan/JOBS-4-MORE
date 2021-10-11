@@ -79,6 +79,9 @@ a:visited {
   color: white;
 }
 
+#go-back a:visited {
+    color: black;
+}
 a:hover {
   text-decoration: none;
 }
@@ -93,11 +96,15 @@ main {
 }
 
 #results {
-  /* I changed the background color Olsen */
-
-  border-style: groove;
-  height: fit-content;
-  /* width: 1000px; */
+    /* I changed the background color Olsen */
+   
+    border-style: groove;
+    height:fit-content;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    /* width: 1000px; */
 }
 
 /* For testing purposes, won't show up in finished product.
@@ -128,15 +135,15 @@ main {
   display: block;
 }
 
-article p,
-#go-back {
-  max-height: fit-content;
-  max-width: 600px;
-  background-color: lightslategray;
-  color: white;
-  border-style: groove;
-  margin: 10px;
-  padding: 10px;
+article p, #go-back {
+    max-height: fit-content;
+    max-width: 600px;
+    background-color: white;
+    color: black;
+    border-style: groove;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
 }
 
 #go-back {
