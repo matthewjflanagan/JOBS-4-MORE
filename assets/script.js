@@ -1,33 +1,37 @@
+var city = $("#city-input");
+var states = $("#states-input");
+console.log(city);
+var jobLevels = $("#level-input");
+var jobCategories = $("#category-input");
 
-var city =$("#location-input")
-var states =$("#States")
-console.log(city)
-var levelJobs = $("#level")
-var industryJobs = $("#Industry")
+var latitude;
+var longitude;
 
-var latitude
-var longitude
-
-$("#search-button").on("click", startSearch)
+$("#search-button").on("click", startSearch);
 
 function startSearch(event) {
-  event.preventDefault()
-  var inputCity = city.val()
-  console.log(inputCity)
-  var inputStates= states.val()
-  var inputLoc = inputCity + ", " + inputStates
-  console.log(inputLoc)
-  var levelJo = levelJobs.val().trim()
-  var industryJo = industryJobs.val()
+  event.preventDefault();
+  var inputCity = city.val().trim();
+  console.log(inputCity);
+  var inputStates = states.val();
+  var inputLoc = inputCity + ", " + inputStates;
+  console.log(inputLoc);
+  var jobLevel = jobLevels.val();
+  var jobCategory = jobCategories.val();
 
-  if (!inputLoc && !levelJo && !industryJo){
-  console.log("Must fill out all the form")
+  if (!inputLoc && !jobLevel && !jobCategory) {
+    console.log("Must fill out all the form");
   } else {
-  var queryString = "./results-page.html?q=" + inputLoc + "&level=" + levelJo + "&industry=" + industryJo
+    var queryString =
+      "./results-page.html?q=" +
+      inputLoc +
+      "&level=" +
+      jobLevel +
+      "&category=" +
+      jobCategory;
 
- location.assign(queryString)
-  // lunchSearch(inputLoc, levelJo, industryJo)
-  // mapLocation(inputLoc)
+    location.assign(queryString);
+    // mapLocation(inputLoc)
   }
 }
 
@@ -66,15 +70,15 @@ function initMap() {
   var options = {
     zoom: 8,
     center: { lat: -34.397, lng: 150.644 },
-  }
+  };
   //New map
   var map = new google.maps.Map(document.getElementById("map"), options);
   // Add marker
   var marker = new google.maps.Marker({
     position: { lat: -34.397, lng: 150.644 },
     map: map,
-    title: "Click to zoom"
-  })
+    title: "Click to zoom",
+  });
 
   map.addListener("center_changed", () => {
     // 3 seconds after the center of the map has changed, pan back to the
@@ -85,11 +89,11 @@ function initMap() {
   });
 
   marker.addListener("click", () => {
-  map.setZoom(8);
-  map.setCenter(marker.getPosition());
+    map.setZoom(8);
+    map.setCenter(marker.getPosition());
   });
 }
-    
+
 // const theMuseAPIKey =
 //   "d5b8e452dd88c290c37f959a5c0f515789058d878d5e5749a5781329f40b7f32";
 // const theMuseURL = "https://www.themuse.com/api/public/jobs";
@@ -143,7 +147,6 @@ function initMap() {
 //   });
 // }
 
-
 // function getJobsByCategory(category, page) {
 //   fetch(
 //     `${theMuseURL}?category=${category}&page=${page}&api_key=${theMuseAPIKey}`
@@ -188,7 +191,7 @@ function initMap() {
 //     var jobCard = $("<div>");
 //     var descriptionElem = $("<div>")
 //     descriptionElem.html(jobDescription);
-    
+
 //     jobCard.append(`<h3>${jobName}</h3>`);
 //     jobCard.append(`<p>Company: ${jobCompany}</p>`);
 //   jobCard.append(`<p>Location: ${jobLocation}</p>`);
