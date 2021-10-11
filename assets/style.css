@@ -109,6 +109,7 @@ main {
 } */
 
 /* JOB DESCRIPTION CSS STARTS HERE */
+
 /* #body-3 {
     background-image: url(money.jpeg);
     background-size: 100%;
@@ -131,6 +132,11 @@ main {
     display: block;
 }
 
+#job-title-input, #location-input-2, #job-title-input-2 {
+    width: 50%;
+    margin-top: -10px;
+}
+
 article p, #go-back {
     max-height: fit-content;
     max-width: 600px;
@@ -145,7 +151,40 @@ article p, #go-back {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: 22px;
+    width: 50%;
+    background-color: #f1f1f1;
+}
+  
+.dropdown-content a {
+    color: black;
+    width: 345px;
+    font-size: 14px;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: white}
+#Industry {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+}
+#level, #States, #City-input {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    margin-bottom: 16px;
 #map {
     background-color: rgba(0, 0, 0, 0.829);
     border-style: groove;
