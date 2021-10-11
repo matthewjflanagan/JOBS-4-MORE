@@ -1,7 +1,10 @@
 
-var inputLocation = $("#location-input")
+var city =$("#location-input")
+var states =$("#States")
+console.log(city)
 var levelJobs = $("#level")
 var industryJobs = $("#Industry")
+
 var latitude
 var longitude
 
@@ -9,7 +12,11 @@ $("#search-button").on("click", startSearch)
 
 function startSearch(event) {
   event.preventDefault()
-  var inputLoc = inputLocation.val().trim()
+  var inputCity = city.val()
+  console.log(inputCity)
+  var inputStates= states.val()
+  var inputLoc = inputCity + ", " + inputStates
+  console.log(inputLoc)
   var levelJo = levelJobs.val().trim()
   var industryJo = industryJobs.val()
 
