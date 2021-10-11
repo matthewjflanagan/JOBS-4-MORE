@@ -185,6 +185,7 @@ article p, #go-back {
     margin-right:auto;
     width: 50%;
     margin-bottom: 16px;
+}
 #map {
     background-color: rgba(0, 0, 0, 0.829);
     border-style: groove;
