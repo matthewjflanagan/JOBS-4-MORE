@@ -167,3 +167,32 @@ function initMap() {
 // });
 // }
 // })
+
+// .then(function (data) {
+//   console.log(data)
+//   for (var i = 0; i < data.results.length; i++){
+
+//     var jobName = data.results[i].name
+//     console.log(jobName)
+//     var jobCompany = data.results[i].company.name
+//     console.log(jobCompany)
+//     var jobLocation = data.results[i].locations[0].name;
+//     console.log(jobLocation)
+//     var jobPublicationDate = data.results[i].publication_date;
+//     console.log(jobPublicationDate)
+//     var jobLevel = data.results[i].levels[0].name
+//     console.log(jobLevel)
+//     var jobDescription = data.results[i].contents;
+//     console.log (jobDescription)
+//     var  jobsContainer = $("#results")
+//     var jobCard = $("<div>");
+//     var descriptionElem = $("<div>")
+//     descriptionElem.html(jobDescription);
+    
+//     jobCard.append(`<h3>${jobName}</h3>`);
+//     jobCard.append(`<p>Company: ${jobCompany}</p>`);
+//   jobCard.append(`<p>Location: ${jobLocation}</p>`);
+
+//   jobCard.append(`<p>Job Posted Date: ${jobPublicationDate}</p>`);
+//   jobCard.append(descriptionElem);
+//   jobsContainer.append(jobCard);

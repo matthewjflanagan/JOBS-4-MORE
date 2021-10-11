@@ -20,6 +20,49 @@ function getParams() {
       })
       .then(function (data) {
         console.log(data)
+        for (var i = 0; i < data.results.length; i++){
+
+          var jobName = data.results[i].name
+          console.log(jobName)
+          var jobCompany = data.results[i].company.name
+          console.log(jobCompany)
+          var jobLocation = data.results[i].locations[0].name;
+          console.log(jobLocation)
+          var jobPublicationDate = data.results[i].publication_date;
+          console.log(jobPublicationDate)
+          var jobLevel = data.results[i].levels[0].name
+          console.log(jobLevel)
+          var jobDescription = data.results[i].contents;
+          console.log (jobDescription)
+          var  jobsContainer = $("#results")
+          var jobCard = $("<div>");
+          var descriptionElem = $("<div>")
+          descriptionElem.html(jobDescription);
+          var jobNames = $("<h3>")
+          jobNames.text(jobName)
+          jobCard.append(jobNames)
+          //   Another way of appending the company name:   jobCard.append(`<h3>${jobName}</h3>`);
+          var companies = $("<p>")
+          companies.text("Company:" + jobCompany)
+          jobCard.append(companies)
+          // Another way of appending the company:  jobCard.append(`<p>Company: ${jobCompany}</p>`);
+          var locations = $("<p>")
+          locations.text("Location:" + jobLocation)
+          jobCard.append(locations)
+        // Another way of appending the location:  jobCard.append(`<p>Location: ${jobLocation}</p>`);
+        var publications = $("<p>")
+          publications.text("Job Posted Date:" + jobPublicationDate)
+          jobCard.append(publications)
+
+        // Another way of appending the publication:  jobCard.append(`<p>Job Posted Date: ${jobPublicationDate}</p>`);
+        jobCard.append(descriptionElem);
+        jobsContainer.append(jobCard);
+
+
+
+        }
+
+
       })
   }
 
@@ -44,5 +87,25 @@ function getParams() {
 //         console.log(latitude)
 //         console.log(longitude)
 //       })
-//   }
-  
+// //   }
+// var issueEl = document.createElement('a');
+// issueEl.classList = 'list-item flex-row justify-space-between align-center';
+// issueEl.setAttribute('href', issues[i].html_url);
+// issueEl.setAttribute('target', '_blank');
+// var displayWarning = function (repo) {
+//   limitWarningEl.textContent = 'To see more than 30 issues, visit ';
+
+//   var linkEl = document.createElement('a');
+//   linkEl.textContent = 'GitHub.com';
+//   linkEl.setAttribute('href', 'https://github.com/' + repo + '/issues');
+//   linkEl.setAttribute('target', '_blank');
+
+//   // This will appear on the bottom of the page.
+//   limitWarningEl.appendChild(linkEl);
+// };
+// var userName = document.createElement('h3');
+// var issueTitle = document.createElement('p');
+// userName.textContent = data[i].user.login;
+// issueTitle.textContent = data[i].title;
+// issueContainer.append(userName);
+// issueContainer.append(issueTitle);
