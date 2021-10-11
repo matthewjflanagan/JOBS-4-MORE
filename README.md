@@ -1,8 +1,6 @@
 # <JOBS-4-MORE>
 ## Description
-* As a consumer 
-* I want to find a job type in a certain location
-* So that I can find a job where I want to live
+Look up a job by industry and experience level to find the job that be best suited for your skillset and experience! A list of jobs will show best on the parameters chosen and you can view each job in more details once you click on the link to the job. Details shown are the job title, company, description, and the location of the job site shown on google maps. 
 
 ## Table of Contents (Optional)
 - [Installation](#installation)
@@ -12,7 +10,6 @@
 
 ## Installation
 
-
 ## Usage
 [JOBS 4 MORE Respostion](https://github.com/matthewjflanagan/JOBS-4-MORE)
 https://matthewjflanagan.github.io/JOBS-4-MORE/
@@ -20,14 +17,16 @@ Acceptance Criteria:
 * WHEN I open the website 
 * THEN I see a search bar with a dropdown menu of different job types
 * WHEN I click on a category
-* THEN I can use the search bar to view a list of jobs in a certain location 
 
 ![Opening Page with Dropdown](assets/openpagewithdropdown.png)
 ![Opening Page without Dropdown](assets/openingpagewithoutdropdown.png)
 ![Results Page with Dropdown](assets/resultspagewithdropdown.png)
 ![Results Page without Dropdown](assets/resultspagewithoutdropdown.png)
 ## Credits
-
+* Mario Bruno: HTML & CSS styling 
+* Olsen Ogouchi: Muse & Google Maps API 
+* Matthew Flanagan: README & Repo Admin
+* Yanghui Xi: Muse API
 
 ## License
 MIT License
@@ -50,9 +49,6 @@ SOFTWARE.
 
 ## How to Contribute
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-  
-## Credits
-
 
 ## License
 MIT License
@@ -78,8 +74,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Features
-Look up a job by industry and experience level to find the job that be best suited for your skillset and experience! A list of jobs will show best on the parameters chosen and you can view each job in more details once you click on the link to the job. Details shown are the job title, company, description, and the location of the job site shown on google maps. 
+
 
 ## How to Contribute
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
- 
