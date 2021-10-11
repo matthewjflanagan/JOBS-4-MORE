@@ -8,6 +8,8 @@ header {
     background-color: rgba(0, 0, 0, 0.829);
     height: 75px;
     border-style: groove;
+    max-width: 670px;
+    margin-left: 25%;
 }
 
 h1 {
@@ -49,7 +51,7 @@ section p {
     width: 50%;
 }
 
-#level {
+#level, #States, #City-input {
     display:block;
     margin-left: auto;
     margin-right:auto;
@@ -77,6 +79,7 @@ a:link {
   
 a:visited {
     text-decoration: none;
+    color: white;
 }
   
 a:hover {
@@ -97,7 +100,7 @@ main {
    
     border-style: groove;
     height:fit-content;
-    width: 1000px;
+    /* width: 1000px; */
 }
 
 /* For testing purposes, won't show up in finished product.
@@ -110,13 +113,7 @@ main {
 } */
 
 /* JOB DESCRIPTION CSS STARTS HERE */
-
-/* #body-3 {
-    background-image: url(money.jpeg);
-    background-size: 100%;
-} */
-
-#job-container {
+#results-container, #job-container {
     background-color: rgba(0, 0, 0, 0.829); 
     border-style: groove;
     margin-top: 20px;
@@ -141,10 +138,11 @@ main {
 article p, #go-back {
     max-height: fit-content;
     max-width: 600px;
-    background-color: rgb(212, 192, 192);
+    background-color: lightslategray;
+    color: white;
     border-style: groove;
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
 }
 
 #go-back {
@@ -152,41 +150,7 @@ article p, #go-back {
     margin-bottom: 20px;
     text-align: center;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    margin-left: 22px;
-    width: 50%;
-    background-color: #f1f1f1;
-}
-  
-.dropdown-content a {
-    color: black;
-    width: 345px;
-    font-size: 14px;
-    padding: 5px 5px;
-    text-decoration: none;
-    display: block;
-}
-  
-.dropdown-content a:hover {background-color: #ddd;}
-  
-.dropdown:hover .dropdown-content {display: block;}
-  
-.dropdown:hover .dropbtn {background-color: white}
-#Industry {
-    display:block;
-    margin-left: auto;
-    margin-right:auto;
-    width: 50%;
-}
-#level, #States, #City-input {
-    display:block;
-    margin-left: auto;
-    margin-right:auto;
-    width: 50%;
-    margin-bottom: 16px;
-}
+
 #map {
     background-color: rgba(0, 0, 0, 0.829);
     border-style: groove;
