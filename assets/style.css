@@ -93,7 +93,8 @@ main {
 }
 
 #results {
-    background-color: rgba(0, 0, 0, 0.829);
+    /* I changed the background color Olsen */
+   
     border-style: groove;
     height:fit-content;
     width: 1000px;
