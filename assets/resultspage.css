@@ -8,9 +8,6 @@ a:link {
     color: white;
   }
   
-  #go-back a:visited {
-      color: black;
-  }
   a:hover {
     text-decoration: none;
   }
@@ -24,6 +21,17 @@ a:link {
     flex-wrap: wrap;
   }
   
+#results-container {
+    background-color: rgba(0, 0, 0, 0.829);
+    border-style: groove;
+    margin-top: 20px;
+    padding-left: 20px;
+    max-height: fit-content;
+    max-width: 650px;
+    position: relative;
+    left: 25%;
+  }
+
   #results {
       /* I changed the background color Olsen */
      

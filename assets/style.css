@@ -38,6 +38,8 @@ section {
 #city-input {
   width: 50%;
   margin-top: -10px;
+  margin-bottom: 20px;
+  margin-left: 95px;
 }
 
 #category-input {
@@ -62,10 +64,10 @@ section {
   width: 50%;
   height: 40px;
   margin-top: 35px;
+  margin-left: 98px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-style: solid;
 }
-
