@@ -1,0 +1,49 @@
+/* JOB DESCRIPTION CSS STARTS HERE */
+#results-container,
+#job-container {
+  background-color: rgba(0, 0, 0, 0.829);
+  border-style: groove;
+  margin-top: 20px;
+  padding-left: 20px;
+  max-height: fit-content;
+  max-width: 650px;
+  position: relative;
+  left: 25%;
+}
+
+.job-headers {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+}
+
+article p, #go-back {
+    max-height: fit-content;
+    max-width: 600px;
+    background-color: white;
+    color: black;
+    border-style: groove;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#go-back {
+  width: 600px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#map {
+  background-color: rgba(0, 0, 0, 0.829);
+  border-style: groove;
+  width: 600px;
+  height: 300px;
+  margin: 15px;
+}
+
+/* #map {
+    height: 300px;
+    width: 100%;
+    margin-top: 70px;
+  } */

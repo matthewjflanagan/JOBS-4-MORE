@@ -1,0 +1,47 @@
+/* RESULTS PAGE CSS STARTS HERE */
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+  #go-back a:visited {
+      color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #results {
+      /* I changed the background color Olsen */
+     
+      border-style: groove;
+      height:fit-content;
+      padding: 10px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      /* width: 1000px; */
+  }
+  
+  /* For testing purposes, won't show up in finished product.
+      .container {
+      height: 120px;
+      width: auto;
+      border-style: groove;
+      margin: 20px;
+      background: whitesmoke;
+  } */
+  
