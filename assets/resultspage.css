@@ -1,4 +1,9 @@
 /* RESULTS PAGE CSS STARTS HERE */
+.border {
+  padding: 20px;
+  margin: 10px;
+}
+
 a:link {
     text-decoration: none;
   }
