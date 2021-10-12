@@ -27,7 +27,8 @@ function writeJob(job) {
   //    postedDate: datetime
   //    level: string (optional)
   // }
-  var jobCardEl = $("<div>");
+  var jobCardEl = $("<div>").addClass('border');
+  $('.border').css('border', 'solid 2px black')
   var descriptionEl = $("<div>");
   descriptionEl.html(job.description);
   var jobNameEl = $("<h3>");
