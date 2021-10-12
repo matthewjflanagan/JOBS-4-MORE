@@ -1,4 +1,18 @@
 /* JOB DESCRIPTION CSS STARTS HERE */
+
+#resultsbody {
+  background-image: url(money.jpeg);
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#descriptionh1 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -22,12 +36,10 @@ a:active {
 #job-container {
   background-color: rgba(0, 0, 0, 0.829);
   border-style: groove;
-  margin-top: 20px;
+  margin-top: 1%;
   padding-left: 20px;
-  max-height: fit-content;
-  max-width: 650px;
+  width: 55%;
   position: relative;
-  left: 25%;
 }
 
 .job-headers {
@@ -36,9 +48,7 @@ a:active {
   display: block;
 }
 
-article p, #go-back {
-    max-height: fit-content;
-    max-width: 600px;
+#job-description, #go-back {
     background-color: white;
     color: black;
     border-style: groove;
@@ -48,7 +58,6 @@ article p, #go-back {
 }
 
 #go-back {
-  width: 600px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -56,7 +65,6 @@ article p, #go-back {
 #map {
   background-color: rgba(0, 0, 0, 0.829);
   border-style: groove;
-  width: 600px;
   height: 300px;
   margin: 15px;
 }

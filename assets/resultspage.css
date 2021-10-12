@@ -1,4 +1,24 @@
 /* RESULTS PAGE CSS STARTS HERE */
+#resultsbody {
+  background-image: url(money.jpeg);
+  background-size: 100%;
+}
+
+#resultsheader {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.829);
+  border-style: groove;
+  width: 50%;
+  margin: auto;
+}
+
+#resultsh1 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  width: 50%;
+}
+
 a:link {
     text-decoration: none;
   }
@@ -16,32 +36,27 @@ a:link {
     text-decoration: none;
   }
   
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
 #results-container {
-    background-color: rgba(0, 0, 0, 0.829);
-    border-style: groove;
-    margin-top: 20px;
-    padding-left: 20px;
-    max-height: fit-content;
-    max-width: 650px;
-    position: relative;
-    left: 25%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.829);
+  border-style: groove;
+  margin: 15px auto;
+  padding: 20px;
+  height: fit-content;
+  width: 75%;
+  position: relative;
   }
 
   #results {
-      /* I changed the background color Olsen */
-     
-      border-style: groove;
-      height:fit-content;
-      padding: 10px;
-      margin: 20px;
-      background-color: white;
-      border-radius: 5px;
-      /* width: 1000px; */
+  display: flex;
+  flex-wrap: wrap;
+  border-style: groove;
+  padding: 2%;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+    /* width: 1000px; */
   }
   
   /* For testing purposes, won't show up in finished product.

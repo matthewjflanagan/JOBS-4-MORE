@@ -1,61 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
 /* LANDING PAGE CSS STARTS HERE */
-body {
+#indexbody {
   background-image: url(money.jpeg);
   background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-header {
+#indexsection {
+  flex: 0 1 auto;
   background-color: rgba(0, 0, 0, 0.829);
-  height: 75px;
+  width: 35%;
+  height: fit-content;
+  margin-top: 7%;
+  color: white;
   border-style: groove;
-  max-width: 670px;
-  margin-left: 25%;
+  padding: 3% 0%;
 }
 
-h1 {
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  padding-left: 20px;
-}
-
-section {
-  background-color: rgba(0, 0, 0, 0.829);
-  color: white;
-  height: 350px;
-  width: 400px;
-  margin: auto;
-  margin-top: 100px;
-  align-content: center;
-  border-style: groove;
+#indexflexcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #homepage-header {
-  text-align: center;
   font-size: 40px;
   font-family: "Courier New", Courier, monospace;
 }
 
-#city-input {
+.landingpageflex {
   width: 50%;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  margin-left: 95px;
-}
-
-#category-input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-#level-input,
-#states-input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-bottom: 16px;
+  margin: 5px;
 }
 
 #search-button {
@@ -63,8 +43,6 @@ section {
   color: white;
   width: 50%;
   height: 40px;
-  margin-top: 35px;
-  margin-left: 98px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
