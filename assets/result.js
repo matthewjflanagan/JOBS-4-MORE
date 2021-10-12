@@ -103,5 +103,5 @@ function searchMuse(queryLocation, queryLevel, queryCategory) {
 }
 
 var params = getParams();
-//searchMuse(params.location, params.level, params.category);
-searchJooble(params.location, params.level, params.category);
+searchMuse(params.location, params.level, params.category);
+// searchJooble(params.location, params.level, params.category);
