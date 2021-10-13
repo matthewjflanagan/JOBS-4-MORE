@@ -30,172 +30,103 @@ function startSearch(event) {
       "&category=" +
       jobCategory;
 
+//storing the input location joblevel and job category in to local storage
+
+var storeData={
+
+  loc: inputLoc,
+  lev: jobLevel,
+  cat:jobCategory
+}
+console.log(storeData)
+var dataStored = JSON.parse(localStorage.getItem("userstorages")) || [];
+console.log(dataStored)
+dataStored.push(storeData)
+localStorage.setItem("userstorages", JSON.stringify(dataStored));
+
+// var storeCompLoc={
+
+//   names: job.company,
+//   locations: job.location
+// }
+// console.log(storeCompLoc)
+// var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+// console.log(companyLocation)
+// companyLocation.push(storeCompLoc)
+// localStorage.setItem("comploc", JSON.stringify(companyLocation));
+
     location.assign(queryString);
-    // mapLocation(inputLoc)
+    
   }
 }
 
-// function lunchSearch(inputLoc, levelJo, industryJo) {
-//   var requestUrl = "https://www.themuse.com/api/public/jobs?location=" + inputLoc +
-//     "&level=" + levelJo + "&industry=" + industryJo + "&page=" + 1;
+function initAutocomplete() {
+  var map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 33.753746, lng: -84.386330 },
+    zoom: 13,
+    mapTypeId: "roadmap",
+  });
+  // Create the search box and link it to the UI element.
+  var input = document.getElementById("search-input");
+  var searchBox = new google.maps.places.SearchBox(input);
 
-//   fetch(requestUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data)
-//     })
-// }
-
-// function mapLocation(inputLoc) {
-//   var requestUrl1 = "https://api.openweathermap.org/data/2.5/weather?q=" + inputLoc +
-//     "&appid=5ec79846ae2fb1a4571dea79f4797492"
-
-//   fetch(requestUrl1)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data1) {
-//       console.log(data1)
-//       latitude = data1.coord.lat
-//       longitude = data1.coord.lon
-//       console.log(latitude)
-//       console.log(longitude)
-//     })
-// }
-
-function initMap() {
-  //Map options
-  var options = {
-    zoom: 8,
-    center: { lat: -34.397, lng: 150.644 },
-  };
-  //New map
-  var map = new google.maps.Map(document.getElementById("map"), options);
-  // Add marker
-  var marker = new google.maps.Marker({
-    position: { lat: -34.397, lng: 150.644 },
-    map: map,
-    title: "Click to zoom",
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  // Bias the SearchBox results towards current map's viewport.
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
   });
 
-  map.addListener("center_changed", () => {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(() => {
-      map.panTo(marker.getPosition());
-    }, 3000);
-  });
+  let markers = [];
 
-  marker.addListener("click", () => {
-    map.setZoom(8);
-    map.setCenter(marker.getPosition());
+  // Listen for the event fired when the user selects a prediction and retrieve
+  // more details for that place.
+  searchBox.addListener("places_changed", () => {
+    var places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    // Clear out the old markers.
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+    markers = [];
+
+    // For each place, get the icon, name and location.
+    var bounds = new google.maps.LatLngBounds();
+
+    places.forEach((place) => {
+      if (!place.geometry || !place.geometry.location) {
+        console.log("Returned place contains no geometry");
+        return;
+      }
+
+      var icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25),
+      };
+
+      // Create a marker for each place.
+      markers.push(
+        new google.maps.Marker({
+          map,
+          icon,
+          title: place.name,
+          position: place.geometry.location,
+        })
+      );
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
   });
 }
 
-// const theMuseAPIKey =
-//   "d5b8e452dd88c290c37f959a5c0f515789058d878d5e5749a5781329f40b7f32";
-// const theMuseURL = "https://www.themuse.com/api/public/jobs";
-
-// let jobsContainer = $("#jobs-container");
-
-// function generateJobElements(results) {
-//   console.log(results);
-//   results.forEach(function (element) {
-//     console.log(results)
-//     let name = element.name;
-//     let company = element.company.name;
-//     let location = element.locations[0].name;
-//     let publicationDate = element.publication_date;
-//     let description = element.contents;
-//     let jobCard = $("<div>");
-//     let descriptionElem = $("<div>");
-//     descriptionElem.html(description);
-//     jobCard.append(`<h3>${name}</h3>`);
-//     jobCard.append(`<p>Company: ${company}</p>`);
-//     jobCard.append(`<p>Location: ${location}</p>`);
-//     jobCard.append(`<p>Job Posted Date: ${publicationDate}</p>`);
-//     jobCard.append(descriptionElem);
-//     jobsContainer.append(jobCard);
-//   });
-// }
-
-// const theMuseAPIKey =
-//   "d5b8e452dd88c290c37f959a5c0f515789058d878d5e5749a5781329f40b7f32";
-// const theMuseURL = "https://www.themuse.com/api/public/jobs";
-// var data;
-// let jobsContainer = $("#jobs-container");
-
-// function generateJobElements(results) {
-//   console.log(results);
-//   results.forEach(function (element) {
-//     let name = element.name;
-//     let company = element.company.name;
-//     let location = element.locations[0].name;
-//     let publicationDate = element.publication_date;
-//     let description = element.contents;
-//     let jobCard = $("<div>");
-//     let descriptionElem = $("<div>");
-//     descriptionElem.html(description);
-//     jobCard.append(`<h3>${name}</h3>`);
-//     jobCard.append(`<p>Company: ${company}</p>`);
-//     jobCard.append(`<p>Location: ${location}</p>`);
-//     jobCard.append(`<p>Job Posted Date: ${publicationDate}</p>`);
-//     jobCard.append(descriptionElem);
-//     jobsContainer.append(jobCard);
-//   });
-// }
-
-// function getJobsByCategory(category, page) {
-//   fetch(
-//     `${theMuseURL}?category=${category}&page=${page}&api_key=${theMuseAPIKey}`
-//   )
-//     .then((resp) => resp.json())
-//     .then((data) => generateJobElements(data.results));
-
-// fetch("https://google-maps-geocoding.p.rapidapi.com/geocode/json?lat="+ latitude +
-// "lng="+ longitude +"&language=en", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "google-maps-geocoding.p.rapidapi.com",
-// 		"x-rapidapi-key": "12281ef330msh7c64940306c1581p1c1845jsn975aa83a9641"
-// 	}
-// })
-// .then(response => {
-// 	console.log(response);
-// })
-// .catch(err => {
-// 	console.error(err);
-// });
-// }
-// })
-
-// .then(function (data) {
-//   console.log(data)
-//   for (var i = 0; i < data.results.length; i++){
-
-//     var jobName = data.results[i].name
-//     console.log(jobName)
-//     var jobCompany = data.results[i].company.name
-//     console.log(jobCompany)
-//     var jobLocation = data.results[i].locations[0].name;
-//     console.log(jobLocation)
-//     var jobPublicationDate = data.results[i].publication_date;
-//     console.log(jobPublicationDate)
-//     var jobLevel = data.results[i].levels[0].name
-//     console.log(jobLevel)
-//     var jobDescription = data.results[i].contents;
-//     console.log (jobDescription)
-//     var  jobsContainer = $("#results")
-//     var jobCard = $("<div>");
-//     var descriptionElem = $("<div>")
-//     descriptionElem.html(jobDescription);
-
-//     jobCard.append(`<h3>${jobName}</h3>`);
-//     jobCard.append(`<p>Company: ${jobCompany}</p>`);
-//   jobCard.append(`<p>Location: ${jobLocation}</p>`);
-
-//   jobCard.append(`<p>Job Posted Date: ${jobPublicationDate}</p>`);
-//   jobCard.append(descriptionElem);
-//   jobsContainer.append(jobCard);

@@ -8,30 +8,40 @@
     <link rel="stylesheet" href="./assets/jobdescription.css" />
     <title>JOBS 4 MORE</title>
   </head>
-  
-  <header>
-    <h1><a href="">JOBS 4 MORE</a></h1>
-  </header>
 
-  <body>
+  <body id="resultsbody">
+      <header>
+    <form>
+      <input id="descriptionh1" type="button" value="JOBS 4 MORE" onclick="history.go(-2)">
+     </form>
+  </header>
       <main id="job-container">
         <article>
-            <h2 id="company-name" class="job-headers">Company Name</h2>
-            <h3 id="job-title" class="job-headers">Job Title</h3>
-            <h4 id="date-posted" class="job-headers">Date Posted</h4>
+            <h2 id="company-name" class="job-headers"></h2>
+            <h3 id="job-location" class="job-headers"></h3>
+            <h4 id="date-posted" class="job-headers"></h4>
             <p id="job-description">
-                Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description 
+                Search job locations and the surrounding area with Google Maps:
             </p>
-            <!-- <p id="go-back"><a href="">Go Back</a></p> -->
         </article>
+        <input
+      id="search-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+    />
         <div id="map">
           <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgJqlD8crlm7n9pxwkpxzGoEw2a33qIIY&callback=initMap&v=weekly"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgJqlD8crlm7n9pxwkpxzGoEw2a33qIIY&callback=initAutocomplete&libraries=places&v=weekly"
             async
           ></script>
         </div>
-        <p id="go-back"><a href="">Go Back</a></p>
+        <form>
+          <input id="go-back" type="button" value="Go Back" onclick="history.back()">
+         </form>
       </main>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/script.js"></script>
+<script src="./assets/description.js"></script>
 </body>
 </html>

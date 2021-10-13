@@ -1,4 +1,20 @@
 /* JOB DESCRIPTION CSS STARTS HERE */
+
+#resultsbody {
+  background-image: url(money.jpeg);
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#descriptionh1 {
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -22,12 +38,10 @@ a:active {
 #job-container {
   background-color: rgba(0, 0, 0, 0.829);
   border-style: groove;
-  margin-top: 20px;
+  margin-top: 1%;
   padding-left: 20px;
-  max-height: fit-content;
-  max-width: 650px;
+  width: 55%;
   position: relative;
-  left: 25%;
 }
 
 .job-headers {
@@ -36,9 +50,7 @@ a:active {
   display: block;
 }
 
-article p, #go-back {
-    max-height: fit-content;
-    max-width: 600px;
+#job-description, #go-back {
     background-color: white;
     color: black;
     border-style: groove;
@@ -48,17 +60,34 @@ article p, #go-back {
 }
 
 #go-back {
-  width: 600px;
   margin-bottom: 20px;
   text-align: center;
+  width: 98%;
 }
 
 #map {
   background-color: rgba(0, 0, 0, 0.829);
   border-style: groove;
-  width: 600px;
   height: 300px;
   margin: 15px;
+}
+
+#search-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#search-input:focus {
+  border-color: #4d90fe;
+}
+li{
+  list-style-type: none;
 }
 
 /* #map {
