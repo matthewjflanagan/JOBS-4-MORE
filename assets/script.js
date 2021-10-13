@@ -28,41 +28,40 @@ function startSearch(event) {
       "&level=" +
       jobLevel +
       "&category=" +
-      jobCategory;
+      jobCategory +
+      "&page=1";
 
-//storing the input location joblevel and job category in to local storage
+    //storing the input location joblevel and job category in to local storage
 
-var storeData={
+    var storeData = {
+      loc: inputLoc,
+      lev: jobLevel,
+      cat: jobCategory,
+    };
+    console.log(storeData);
+    var dataStored = JSON.parse(localStorage.getItem("userstorages")) || [];
+    console.log(dataStored);
+    dataStored.push(storeData);
+    localStorage.setItem("userstorages", JSON.stringify(dataStored));
 
-  loc: inputLoc,
-  lev: jobLevel,
-  cat:jobCategory
-}
-console.log(storeData)
-var dataStored = JSON.parse(localStorage.getItem("userstorages")) || [];
-console.log(dataStored)
-dataStored.push(storeData)
-localStorage.setItem("userstorages", JSON.stringify(dataStored));
+    // var storeCompLoc={
 
-// var storeCompLoc={
-
-//   names: job.company,
-//   locations: job.location
-// }
-// console.log(storeCompLoc)
-// var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
-// console.log(companyLocation)
-// companyLocation.push(storeCompLoc)
-// localStorage.setItem("comploc", JSON.stringify(companyLocation));
+    //   names: job.company,
+    //   locations: job.location
+    // }
+    // console.log(storeCompLoc)
+    // var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+    // console.log(companyLocation)
+    // companyLocation.push(storeCompLoc)
+    // localStorage.setItem("comploc", JSON.stringify(companyLocation));
 
     location.assign(queryString);
-    
   }
 }
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 33.753746, lng: -84.386330 },
+    center: { lat: 33.753746, lng: -84.38633 },
     zoom: 13,
     mapTypeId: "roadmap",
   });
@@ -129,4 +128,3 @@ function initAutocomplete() {
     map.fitBounds(bounds);
   });
 }
-

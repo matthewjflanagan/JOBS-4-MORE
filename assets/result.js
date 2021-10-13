@@ -9,11 +9,13 @@ function getParams() {
   var queryLocation = parameterSearch[0].split("=").pop();
   var queryLevel = parameterSearch[1].split("=").pop();
   var queryCategory = parameterSearch[2].split("=").pop();
+  var queryPage = parameterSearch[3].split("=").pop();
   console.log(queryLocation);
   return {
     location: queryLocation,
     level: queryLevel,
     category: queryCategory,
+    page: queryPage,
   };
 }
 
@@ -54,39 +56,35 @@ function writeJob(job) {
   //   border[i].click(LunchJobPage());
   // }
 
-  $(".border").on("click", function(){
-      /* Do your stuffs here */
-      var storeCompLoc={
+  $(".border").on("click", function () {
+    /* Do your stuffs here */
+    var storeCompLoc = {
+      names: job.company,
+      locations: job.location,
+    };
+    console.log(storeCompLoc);
+    var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+    console.log(companyLocation);
+    companyLocation.push(storeCompLoc);
+    localStorage.setItem("comploc", JSON.stringify(companyLocation));
 
-        names: job.company,
-        locations: job.location
-      }
-      console.log(storeCompLoc)
-      var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
-      console.log(companyLocation)
-      companyLocation.push(storeCompLoc)
-      localStorage.setItem("comploc", JSON.stringify(companyLocation));
-      
-      location.assign("./job-descrition.html");
-    });
-  
+    location.assign("./job-descrition.html");
+  });
 
+  //   function LunchJobPage(){
+  // var storeCompLoc={
 
-//   function LunchJobPage(){
-// var storeCompLoc={
+  //   names: job.company,
+  //   locations: job.location
+  // }
+  // console.log(storeCompLoc)
+  // var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+  // console.log(companyLocation)
+  // companyLocation.push(storeCompLoc)
+  // localStorage.setItem("comploc", JSON.stringify(companyLocation));
 
-//   names: job.company,
-//   locations: job.location
-// }
-// console.log(storeCompLoc)
-// var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
-// console.log(companyLocation)
-// companyLocation.push(storeCompLoc)
-// localStorage.setItem("comploc", JSON.stringify(companyLocation));
-
-// location.assign("./job-descrition.html");
-//   }
-
+  // location.assign("./job-descrition.html");
+  //   }
 }
 
 function writeJobs(jobs) {
@@ -104,12 +102,17 @@ function writeJobs(jobs) {
   });
 }
 
-async function searchJooble(queryLocation, queryLevel, queryCategory) {
+async function searchJooble(
+  queryLocation,
+  queryLevel,
+  queryCategory,
+  queryPage
+) {
   var searchParams = {
     location: decodeURIComponent(queryLocation),
     keywords:
       decodeURIComponent(queryCategory) + " " + decodeURIComponent(queryLevel),
-    page: 1,
+    page: queryPage,
   };
 
   var requestUrl = `https://jooble.org/api/${joobleAPIKey}`;
@@ -140,8 +143,8 @@ async function searchJooble(queryLocation, queryLevel, queryCategory) {
     });
 }
 
-async function searchMuse(queryLocation, queryLevel, queryCategory) {
-  var requestUrl = `https://www.themuse.com/api/public/jobs?location=${queryLocation}&level=${queryLevel}&category=${queryCategory}&page=${1}`;
+async function searchMuse(queryLocation, queryLevel, queryCategory, queryPage) {
+  var requestUrl = `https://www.themuse.com/api/public/jobs?location=${queryLocation}&level=${queryLevel}&category=${queryCategory}&page=${queryPage}`;
 
   return await fetch(requestUrl)
     .then(function (response) {
@@ -168,7 +171,31 @@ async function searchMuse(queryLocation, queryLevel, queryCategory) {
 }
 
 var params = getParams();
-var museJobs = searchMuse(params.location, params.level, params.category);
-var joobleJobs = searchJooble(params.location, params.level, params.category);
+var museJobs = searchMuse(
+  params.location,
+  params.level,
+  params.category,
+  params.page
+);
+var joobleJobs = searchJooble(
+  params.location,
+  params.level,
+  params.category,
+  params.page
+);
 var allJobs = Promise.all([museJobs, joobleJobs]);
 writeJobs(allJobs);
+
+$("#next-button").on("click", function () {
+  var nextPage = parseInt(params.page) + 1;
+  console.log(nextPage);
+  var queryString = `./results-page.html?q=${params.location}&level=${params.level}&category=${params.category}&page=${nextPage}`;
+  location.assign(queryString);
+});
+
+$("#previous-button").on("click", function () {
+  var previousPage = Math.max(1, parseInt(params.page) - 1);
+  console.log(previousPage);
+  var queryString = `./results-page.html?q=${params.location}&level=${params.level}&category=${params.category}&page=${previousPage}`;
+  location.assign(queryString);
+});
