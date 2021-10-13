@@ -28,10 +28,11 @@ var companyLocationLi = $("<li>")
  var clear = $("#go-back")
 
  clear.on("click", function(){
-   localStorage.remove(companyLocation[0]);
+//    localStorage.removeItem(companyLocation[0].names);
+//    localStorage.clear()
 //    location.reload;
     
-    location.assign(queryString1)
+    
 });
 
 

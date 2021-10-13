@@ -4,21 +4,22 @@
 
 /* LANDING PAGE CSS STARTS HERE */
 #indexbody {
-  background-image: url(money.jpeg);
-  background-size: 100%;
-  display: flex;
+  background: url(money.jpeg) no-repeat center center fixed;
+ display: flex;
   flex-direction: row;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #indexsection {
   flex: 0 1 auto;
   background-color: rgba(0, 0, 0, 0.829);
-  width: 35%;
+  width: 400px;
   height: fit-content;
-  margin-top: 7%;
+  margin-top: 200px;
   color: white;
   border-style: groove;
   padding: 3% 0%;
@@ -52,6 +53,21 @@
   border-style: solid;
 }
 
+@media screen and (max-width: 900px){
+
+  #indexsection {
+    
+    width: 300px;
+    padding-bottom: 20px;
+    margin-top: 200px;
+  }
+  #homepage-header {
+    font-size: 30px;
+   
+  }
+
+}
+
 .switch-page-button {
   font-size: 20px;
   padding: 7px;
@@ -74,3 +90,4 @@
   margin-right: 230px;
   padding: 0 28px;
 }
+
