@@ -14,7 +14,7 @@ https://matthewjflanagan.github.io/JOBS-4-MORE/
 
 ![Opening Page without Dropdown](assets/openingpagewithoutdropdown.png)
 ![Results Page](assets/resultspage.PNG)
-![Job Description Page](assets/resultspage.PNG)
+![Job Description Page](assets/jobdescription.PNG)
 
 ## Credits
 * Mario Bruno: Wireframing, HTML, & CSS styling 
