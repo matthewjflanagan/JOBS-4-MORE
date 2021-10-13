@@ -45,6 +45,45 @@ function writeJob(job) {
   jobCardEl.append(updatedEl);
   jobCardEl.append(descriptionEl);
   jobsContainer.append(jobCardEl);
+
+  // var border = $('.border')
+  // for (var i = 0, len = border.length; i < len; i++) {
+  //   border[i].click(LunchJobPage());
+  // }
+
+  $(".border").on("click", function(){
+      /* Do your stuffs here */
+      var storeCompLoc={
+
+        names: job.company,
+        locations: job.location
+      }
+      console.log(storeCompLoc)
+      var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+      console.log(companyLocation)
+      companyLocation.push(storeCompLoc)
+      localStorage.setItem("comploc", JSON.stringify(companyLocation));
+      
+      location.assign("./job-descrition.html");
+    });
+  
+
+
+//   function LunchJobPage(){
+// var storeCompLoc={
+
+//   names: job.company,
+//   locations: job.location
+// }
+// console.log(storeCompLoc)
+// var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+// console.log(companyLocation)
+// companyLocation.push(storeCompLoc)
+// localStorage.setItem("comploc", JSON.stringify(companyLocation));
+
+// location.assign("./job-descrition.html");
+//   }
+
 }
 
 function searchJooble(queryLocation, queryLevel, queryCategory) {
