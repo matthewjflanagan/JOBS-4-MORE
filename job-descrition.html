@@ -16,22 +16,30 @@
   <body>
       <main id="job-container">
         <article>
-            <h2 id="company-name" class="job-headers">Company Name</h2>
-            <h3 id="job-title" class="job-headers">Job Title</h3>
+            <h2 id="company-name" class="job-headers"></h2>
+            <h3 id="job-location" class="job-headers"></h3>
             <h4 id="date-posted" class="job-headers">Date Posted</h4>
             <p id="job-description">
                 Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description Job Description 
             </p>
             <!-- <p id="go-back"><a href="">Go Back</a></p> -->
         </article>
+        <input
+      id="search-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+    />
         <div id="map">
           <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgJqlD8crlm7n9pxwkpxzGoEw2a33qIIY&callback=initMap&v=weekly"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgJqlD8crlm7n9pxwkpxzGoEw2a33qIIY&callback=initAutocomplete&libraries=places&v=weekly"
             async
           ></script>
         </div>
         <p id="go-back"><a href="">Go Back</a></p>
       </main>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/script.js"></script>
+<script src="./assets/description.js"></script>
 </body>
 </html>
