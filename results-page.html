@@ -13,17 +13,28 @@
     <header id="resultsheader">
       <!-- <h1 id="resultsh1"><a href="index.html">JOBS 4 MORE</a></h1> -->
       <form>
-        <input id="resultsh1" type="button" value="JOBS 4 MORE" onclick="history.go(-1)">
-       </form>
+        <input
+          id="resultsh1"
+          type="button"
+          value="JOBS 4 MORE"
+          onclick="history.go(-1)"
+        />
+      </form>
     </header>
     <main id="results-container">
-    <div id="results">
-
+      <div id="results"></div>
+    </main>
+    <div id="button-container">
+      <button type="button" class="switch-page-button" id="previous-button">
+        Previous
+      </button>
+      <button type="button" class="switch-page-button" id="next-button">
+        Next
+      </button>
     </div>
-  </main>
- 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="./assets/result.js"></script>
-  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/result.js"></script>
   </body>
 </html>
