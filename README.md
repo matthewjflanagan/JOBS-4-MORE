@@ -2,7 +2,7 @@
 ## Description
 Look up a job by industry and experience level to find the job that be best suited for your skillset and experience! A list of jobs will show best on the parameters chosen and you can view each job in more details once you click on the link to the job. Details shown are the job title, company, description, and Google Maps so you can look up the area where your potential job is located. 
 
-## Table of Contents (Optional)
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
