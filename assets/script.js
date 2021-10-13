@@ -1,6 +1,5 @@
 var city = $("#city-input");
 var states = $("#states-input");
-console.log(city);
 var jobLevels = $("#level-input");
 var jobCategories = $("#category-input");
 
@@ -12,10 +11,8 @@ $("#search-button").on("click", startSearch);
 function startSearch(event) {
   event.preventDefault();
   var inputCity = city.val().trim();
-  console.log(inputCity);
   var inputStates = states.val();
   var inputLoc = inputCity + ", " + inputStates;
-  console.log(inputLoc);
   var jobLevel = jobLevels.val();
   var jobCategory = jobCategories.val();
 

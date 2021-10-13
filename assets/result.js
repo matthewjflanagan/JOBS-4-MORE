@@ -1,16 +1,15 @@
 var joobleAPIKey = "2602e22f-9b58-49a6-bbdf-15679eaaf126";
-var themuseAPIKey;
+var themuseAPIKey =
+  "d5b8e452dd88c290c37f959a5c0f515789058d878d5e5749a5781329f40b7f32";
 var jobsContainer = $("#results");
 
 function getParams() {
   var parameterSearch = document.location.search.split("&");
-  console.log(parameterSearch);
   // Get the query and format values
   var queryLocation = parameterSearch[0].split("=").pop();
   var queryLevel = parameterSearch[1].split("=").pop();
   var queryCategory = parameterSearch[2].split("=").pop();
   var queryPage = parameterSearch[3].split("=").pop();
-  console.log(queryLocation);
   return {
     location: queryLocation,
     level: queryLevel,
@@ -144,7 +143,7 @@ async function searchJooble(
 }
 
 async function searchMuse(queryLocation, queryLevel, queryCategory, queryPage) {
-  var requestUrl = `https://www.themuse.com/api/public/jobs?location=${queryLocation}&level=${queryLevel}&category=${queryCategory}&page=${queryPage}`;
+  var requestUrl = `https://www.themuse.com/api/public/jobs?location=${queryLocation}&level=${queryLevel}&category=${queryCategory}&page=${queryPage}&api_key=${themuseAPIKey}`;
 
   return await fetch(requestUrl)
     .then(function (response) {
@@ -188,14 +187,12 @@ writeJobs(allJobs);
 
 $("#next-button").on("click", function () {
   var nextPage = parseInt(params.page) + 1;
-  console.log(nextPage);
   var queryString = `./results-page.html?q=${params.location}&level=${params.level}&category=${params.category}&page=${nextPage}`;
   location.assign(queryString);
 });
 
 $("#previous-button").on("click", function () {
   var previousPage = Math.max(1, parseInt(params.page) - 1);
-  console.log(previousPage);
   var queryString = `./results-page.html?q=${params.location}&level=${params.level}&category=${params.category}&page=${previousPage}`;
   location.assign(queryString);
 });
