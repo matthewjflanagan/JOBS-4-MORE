@@ -1,6 +1,6 @@
 # <JOBS-4-MORE>
 ## Description
-Look up a job by industry and experience level to find the job that be best suited for your skillset and experience! A list of jobs will show best on the parameters chosen and you can view each job in more details once you click on the link to the job. Details shown are the job title, company, description, and the location of the job site shown on google maps. 
+Look up a job by industry and experience level to find the job that be best suited for your skillset and experience! A list of jobs will show best on the parameters chosen and you can view each job in more details once you click on the link to the job. Details shown are the job title, company, description, and Google Maps so you can look up the area where your potential job is located. 
 
 ## Table of Contents (Optional)
 - [Installation](#installation)
@@ -8,25 +8,19 @@ Look up a job by industry and experience level to find the job that be best suit
 - [Credits](#credits)
 - [License](#license)
 
-## Installation
-
 ## Usage
 [JOBS 4 MORE Respostion](https://github.com/matthewjflanagan/JOBS-4-MORE)
 https://matthewjflanagan.github.io/JOBS-4-MORE/
-Acceptance Criteria: 
-* WHEN I open the website 
-* THEN I see a search bar with a dropdown menu of different job types
-* WHEN I click on a category
 
-![Opening Page with Dropdown](assets/openpagewithdropdown.png)
 ![Opening Page without Dropdown](assets/openingpagewithoutdropdown.png)
-![Results Page with Dropdown](assets/resultspagewithdropdown.png)
-![Results Page without Dropdown](assets/resultspagewithoutdropdown.png)
+![Results Page](assets/resultspage.PNG)
+![Job Description Page](assets/resultspage.PNG)
+
 ## Credits
-* Mario Bruno: HTML & CSS styling 
+* Mario Bruno: Wireframing, HTML, & CSS styling 
 * Olsen Ogouchi: Muse & Google Maps API 
-* Matthew Flanagan: README & Repo Admin
-* Yanghui Xi: Muse API
+* Matthew Flanagan: Repository, CSS, Functionality, & README
+* Yanghui Xi: Muse & Jooble API
 
 ## License
 MIT License
@@ -72,9 +66,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Features
-
 
 ## How to Contribute
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
