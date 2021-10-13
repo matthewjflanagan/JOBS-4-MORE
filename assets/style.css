@@ -71,3 +71,26 @@ section {
   border-bottom-right-radius: 5px;
   border-style: solid;
 }
+
+.switch-page-button {
+  font-size: 20px;
+  padding: 7px;
+  align-items: center;
+  border-radius: 5px;
+}
+.switch-page-button:hover {
+  background-color: wheat;
+}
+#button-container {
+  display: flex;
+  border: none;
+  justify-content: space-around;
+}
+
+#previous-button {
+  margin-right: 150px;
+}
+#next-button {
+  margin-right: 230px;
+  padding: 0 28px;
+}
