@@ -14,15 +14,20 @@
 }
 
 #resultsh1 {
-  color: white;
+  color: black;
   font-family: "Courier New", Courier, monospace;
-  width: 50%;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .border {
   padding: 20px;
   margin: 10px;
+}
 
+.border:hover {
+  background-color: lightgray;
+  transition: 2s;
 }
 
 a:link {
