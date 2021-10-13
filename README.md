@@ -9,7 +9,7 @@ Look up a job by industry and experience level to find the job that be best suit
 - [License](#license)
 
 ## Usage
-[JOBS 4 MORE Respostion](https://github.com/matthewjflanagan/JOBS-4-MORE)
+[JOBS 4 MORE Respository](https://github.com/matthewjflanagan/JOBS-4-MORE)
 https://matthewjflanagan.github.io/JOBS-4-MORE/
 
 ![Opening Page without Dropdown](assets/openingpagewithoutdropdown.png)
