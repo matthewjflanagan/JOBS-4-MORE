@@ -83,6 +83,9 @@ a:active {
 #search-input:focus {
   border-color: #4d90fe;
 }
+li{
+  list-style-type: none;
+}
 
 /* #map {
     height: 300px;

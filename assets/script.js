@@ -30,6 +30,31 @@ function startSearch(event) {
       "&category=" +
       jobCategory;
 
+//storing the input location joblevel and job category in to local storage
+
+var storeData={
+
+  loc: inputLoc,
+  lev: jobLevel,
+  cat:jobCategory
+}
+console.log(storeData)
+var dataStored = JSON.parse(localStorage.getItem("userstorages")) || [];
+console.log(dataStored)
+dataStored.push(storeData)
+localStorage.setItem("userstorages", JSON.stringify(dataStored));
+
+// var storeCompLoc={
+
+//   names: job.company,
+//   locations: job.location
+// }
+// console.log(storeCompLoc)
+// var companyLocation = JSON.parse(localStorage.getItem("comploc")) || [];
+// console.log(companyLocation)
+// companyLocation.push(storeCompLoc)
+// localStorage.setItem("comploc", JSON.stringify(companyLocation));
+
     location.assign(queryString);
     
   }
