@@ -17,6 +17,11 @@
   color: white;
   font-family: "Courier New", Courier, monospace;
   width: 50%;
+
+.border {
+  padding: 20px;
+  margin: 10px;
+
 }
 
 a:link {
