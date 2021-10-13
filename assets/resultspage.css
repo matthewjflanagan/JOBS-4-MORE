@@ -1,4 +1,9 @@
 /* RESULTS PAGE CSS STARTS HERE */
+.border {
+  padding: 20px;
+  margin: 10px;
+}
+
 a:link {
     text-decoration: none;
   }
@@ -33,15 +38,13 @@ a:link {
   }
 
   #results {
-      /* I changed the background color Olsen */
-     
-      border-style: groove;
+     border-style: groove;
       height:fit-content;
       padding: 10px;
       margin: 20px;
       background-color: white;
       border-radius: 5px;
-      /* width: 1000px; */
+      max-width: 570px;
   }
   
   /* For testing purposes, won't show up in finished product.
