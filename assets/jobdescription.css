@@ -1,7 +1,7 @@
 /* JOB DESCRIPTION CSS STARTS HERE */
 
 #resultsbody {
-  background-image: url(money.jpeg);
+  background-color: #eeedde;
   background-size: 100%;
   display: flex;
   flex-direction: column;
@@ -9,10 +9,14 @@
 }
 
 #descriptionh1 {
-  color: black;
+  background-color: #98947c;
+  color: #eeedde;
+  border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
-  font-size: xx-large;
+  font-size: 20px;
   font-weight: bolder;
+  text-shadow: 0 0 2px #d9e5d6;
+  margin-bottom: 30px;
 }
 
 a:link {
@@ -36,18 +40,19 @@ a:active {
 }
 
 #job-container {
-  background-color: rgba(0, 0, 0, 0.829);
-  border-style: groove;
-  margin-top: 1%;
-  padding-left: 20px;
-  width: 55%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9e5d6;
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 400px;
 }
 
 .job-headers {
-  color: white;
+  padding: 0 20px;;
+  color: #98947c;
   font-family: "Courier New", Courier, monospace;
-  display: block;
 }
 
 #job-description, #go-back {
@@ -60,15 +65,21 @@ a:active {
 }
 
 #go-back {
-  margin-bottom: 20px;
+  background-color: #98947c;
+  color: #eeedde;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  text-shadow: 0 0 2px #d9e5d6;
   text-align: center;
-  width: 98%;
+  width: 250px;
 }
 
 #map {
-  background-color: rgba(0, 0, 0, 0.829);
-  border-style: groove;
-  height: 300px;
+  border-radius: 5px;
+  width: 380px;
+  height: 380px;
   margin: 15px;
 }
 

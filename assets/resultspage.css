@@ -1,23 +1,27 @@
 /* RESULTS PAGE CSS STARTS HERE */
 #resultsbody {
-  background-image: url(money.jpeg);
+  background-color: #eeedde;
   background-size: 100%;
 }
 
 #resultsheader {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.829);
-  border-style: groove;
-  width: 50%;
-  margin: auto;
+  background-color: #d9e5d6;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 20px 0;
 }
 
 #resultsh1 {
-  color: black;
+  background-color: #98947c;
+  color: #eeedde;
+  border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
-  font-size: xx-large;
+  font-size: 20px;
   font-weight: bolder;
+  text-shadow: 0 0 2px #d9e5d6;
+
 }
 
 .border {
@@ -26,8 +30,9 @@
 }
 
 .border:hover {
-  background-color: lightgray;
+  background-color: white;
   transition: 2s;
+  cursor: pointer;
 }
 
 a:link {
@@ -50,24 +55,23 @@ a:link {
 #results-container {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.829);
-  border-style: groove;
+  background-color: #d9e5d6;
+  border-radius: 10px;
   margin: 15px auto;
   padding: 20px;
   height: fit-content;
-  width: 75%;
+  width: 98%;
   position: relative;
   }
 
   #results {
   display: flex;
   flex-wrap: wrap;
-  border-style: groove;
   padding: 2%;
   width: 100%;
-  background-color: white;
+  background-color: #eeedde;
   border-radius: 5px;
-    /* width: 1000px; */
+  font-family: "Courier New", Courier, monospace;
   }
   
   /* For testing purposes, won't show up in finished product.

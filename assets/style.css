@@ -4,25 +4,21 @@
 
 /* LANDING PAGE CSS STARTS HERE */
 #indexbody {
-  background: url(money.jpeg) no-repeat center center fixed;
- display: flex;
+  background-color: #eeedde;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 #indexsection {
   flex: 0 1 auto;
-  background-color: rgba(0, 0, 0, 0.829);
+  background-color: #d9e5d6;
   width: 400px;
   height: fit-content;
   margin-top: 200px;
-  color: white;
-  border-style: groove;
-  padding: 3% 0%;
+  color: #3d4544;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #3d4544;
 }
 
 #indexflexcontainer {
@@ -37,20 +33,24 @@
 }
 
 .landingpageflex {
-  width: 50%;
-  margin: 5px;
+  width: 80%;
+  margin: 7px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #3d4544;
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
 }
 
 #search-button {
-  background-color: rgb(0, 132, 255);
+  background-color: #3d4544;
   color: white;
-  width: 50%;
-  height: 40px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-style: solid;
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+  width: 150px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px){
@@ -63,7 +63,6 @@
   }
   #homepage-header {
     font-size: 30px;
-   
   }
 
 }

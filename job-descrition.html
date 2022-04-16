@@ -12,7 +12,7 @@
   <body id="resultsbody">
       <header>
     
-      <button id="descriptionh1" type="button" onclick="history.go(-2); window.localStorage.removeItem('comploc');">JOBS 4 MORE</button>
+      <button id="descriptionh1" type="button" onclick="history.go(-2); window.localStorage.removeItem('comploc');">Back to Search</button>
      
   </header>
       <main id="job-container">
@@ -20,9 +20,6 @@
             <h2 id="company-name" class="job-headers"></h2>
             <h3 id="job-location" class="job-headers"></h3>
             <h4 id="date-posted" class="job-headers"></h4>
-            <p id="job-description">
-                Search job locations and the surrounding area with Google Maps:
-            </p>
         </article>
         <input
       id="search-input"
@@ -38,7 +35,7 @@
         </div>
         
           
-          <button id="go-back" type="button" onclick="history.back(); window.localStorage.removeItem('comploc');">&larr;Go-Back</button>
+          <button id="go-back" type="button" onclick="history.back(); window.localStorage.removeItem('comploc');">&larr; Back to Results</button>
       </main>
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/script.js"></script>
